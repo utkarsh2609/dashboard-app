@@ -1,0 +1,27 @@
+@import "../../variables";
+
+.banner_area {
+    height: 100vh;
+    background-color: $primary-color;
+    position: absolute;
+    width: 588px;
+    color: #ffffff;
+    left: 0px;
+    top: 0px;
+
+    .banner_heading {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 72px;
+        line-height: 88px;
+    }
+}
+
+.login_area {
+    position: absolute;
+    width: 852px;
+    height: 1024px;
+    left: 588px;
+    top: 0px;
+    background: #f5f5f5;
+}
