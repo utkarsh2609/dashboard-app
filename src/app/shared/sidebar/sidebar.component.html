@@ -1,0 +1,13 @@
+<div class="navigation">
+    <div class="navigation_header"> {{appTitle}} </div>
+    <div class="navigation_container">
+        <ul *ngFor='let route of routes'>
+            <li class="navigation_option">
+                <a class="d-flex justify-content-start" routerLink= "{{route.path}}" routerLinkActive="active">
+                    <img class="route_icon" [src]="route.icon" alt="">
+                    {{ route.name }}
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

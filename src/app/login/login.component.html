@@ -1,11 +1,12 @@
-<p>login works!</p>
-<div class="container">
-  <!-- <div class="row"> -->
-    <div class="col-md-4 d-flex justify-content-center align-items-center banner_area">
-      <h1 class="banner_heading">Dash.</h1>
-    </div>
-    <div class="col-md-6d-flex justify-content-center align-items-center login_area">
+<div class="row">
+  <div class="col-md-4 d-flex justify-content-center align-items-center banner_area">
+    <h1 class="banner_heading">{{appTitle}}</h1>
+  </div>
+  <div class="col-md-6 d-flex flex-column justify-content-center align-items-center login_area">
+      <div class="container">
+      <div class="current_page_title">{{title}}</div>
+      <div class="current_page_description"> {{description}} </div>
       <router-outlet></router-outlet>
     </div>
-  <!-- </div> -->
-</div>
+    </div>
+  </div>
