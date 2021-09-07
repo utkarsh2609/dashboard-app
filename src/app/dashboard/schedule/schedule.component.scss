@@ -1,0 +1,27 @@
+@import "../../../variables";
+
+li {
+    list-style: none;
+    border-left: 5px solid olivedrab;
+    margin-bottom: 5px;
+    padding-left: 5px;
+
+    .event {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        color: $primary-text-color;
+    
+    }
+
+    .event_time {
+        font-family: Lato;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: $secondary-text-color;
+    }
+}

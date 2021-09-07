@@ -5,10 +5,16 @@
   margin-top: 4%;
   margin-left: 2%;
   margin-right: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  width: 75%;
 }
 
 .current_page_header {
-  position: absolute;
+  // position: absolute;
   width: 138px;
   height: 29px;
   left: 330px;
@@ -25,5 +31,5 @@
 }
 
 .router_outlet {
-  padding-left: 7rem;
+  padding-right: 2rem;
 }

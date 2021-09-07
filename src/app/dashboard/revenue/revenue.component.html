@@ -1,1 +1,7 @@
-<p>revenue works!</p>
+<div class="d-flex justify-content-around flex-column p-3 revenue_card" [ngStyle]='{background: item.colorCode} '*ngFor="let item of revenueData" >
+    <div class="d-flex justify-content-end">
+        <img class="revenue_card_icon" [src]="item.icon" [alt]="item.label">
+    </div>
+    <div class="revenue_card_label"> {{item.label}} </div>
+    <div class="revenue_card_value"> {{item.value}} </div>
+</div>

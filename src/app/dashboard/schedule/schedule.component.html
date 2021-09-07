@@ -1,1 +1,18 @@
-<p>schedule works!</p>
+<div class="section_card">
+    <div class="row">
+        <div class="section_card_header">Today's schedule</div>
+        <div class="section_card_sub_header">
+            See All
+            <img src="../../../assets//images/right_arrow.svg" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <ul>
+            <li [ngStyle]="{'border-color': event.eventColorCode}" *ngFor='let event of events'>
+                <div class="event"> {{event.purpose}}</div>
+                <div class="event_time"> {{event.time}} </div>
+                <div class="event_time"> {{event.location}} </div>
+            </li>
+        </ul>
+    </div>
+</div>
