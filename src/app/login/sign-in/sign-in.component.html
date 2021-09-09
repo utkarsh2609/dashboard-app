@@ -1,1 +1,67 @@
-<p>sign-in works!</p>
+<div class="section_card">
+  <div class="row w-100 d-flex justify-content-between pb-4">
+    <div class="col-12 section_card_header">Account</div>
+  </div>
+  <div class="w-100 row">
+    <!-- Sign Up Form -->
+    <form class="w-100">
+      <div class="row mt-3">
+        <div class="col-12">
+          <div class="form-group">
+            <label class="custom_form_label" for="email">Email Address</label>
+            <input
+              type="email"
+              class="custom_input_field"
+              id="email"
+              aria-describedby="emailHelp"
+              #userName
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-12">
+          <div class="form-group">
+            <label class="custom_form_label" for="pswrd">Password</label>
+            <input
+              type="password"
+              class="custom_input_field"
+              id="pswrd"
+              aria-describedby="pswrdHelp"
+              #userPassword
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 d-flex justify-content-end">
+          <button
+            type="submit"
+            class="custom_btn custom_save_btn"
+            (click)="authService.SignIn(userName.value, userPassword.value)"
+          >
+            Sign In
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Calling GoogleAuth Api from AuthService -->
+<div class="formGroup">
+    <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+      <i class="fab fa-google-plus-g"></i>
+      Log in with Google
+    </button>
+  </div>
+
+  <div class="forgotPassword">
+    <span routerLink="/forgot-password">Forgot Password?</span>
+  </div>
+
+<div class="redirectToLogin">
+  <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+</div>

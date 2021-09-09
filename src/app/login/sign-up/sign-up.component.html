@@ -25,7 +25,7 @@
                 <div class="col-12">
                     <div class="form-group">
                         <label class="custom_form_label" for="email">Email Address</label>
-                        <input type="email" class="custom_input_field" id="email" aria-describedby="emailHelp">
+                        <input type="email" class="custom_input_field" id="email" aria-describedby="emailHelp" #userEmail required>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@
                     <div class="form-group">
                         <label class="custom_form_label" for="currentpswrd">Current Password</label>
                         <input type="password" class="custom_input_field" id="currentpswrd"
-                            aria-describedby="currentpswrdHelp">
+                            aria-describedby="currentpswrdHelp" #userPwd required>
                     </div>
                 </div>
             </div>
@@ -49,9 +49,21 @@
             </div>
             <div class="row mt-4">
                 <div class="col-12 d-flex justify-content-end">
-                    <button type="submit" class="custom_btn custom_save_btn">Submit</button>
+                    <button type="submit" class="custom_btn custom_save_btn"(click)="authService.SignUp(userEmail.value, userPwd.value)">Sign Up</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
+
+<!-- Continue with Google -->
+<div class="formGroup">
+    <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
+      <i class="fab fa-google-plus-g"></i>
+      Continue with Google
+    </button>
+  </div>
+
+  <div class="redirectToLogin">
+    <span>Already have an account? <span class="redirect" routerLink="/sign-in">Log In</span></span>
+  </div> 

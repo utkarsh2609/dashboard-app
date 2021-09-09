@@ -1,17 +1,17 @@
 
 <div class="app-container">
-    <aside class="d-flex justify-content-start">
+    <aside class="d-flex justify-content-start" *ngIf="authService.isLoggedIn">
         <app-sidebar></app-sidebar>
     </aside>
     <main>
-        <div class="row">
+        <div class="row" *ngIf="authService.isLoggedIn">
             <div class="col-sm-6">
                 <div class="current_page_header"> {{currentPageTitle}} </div>
             </div>
             <div class="col-sm-6 d-flex justify-content-end">
                 <div class="global_search"> </div>
                 <img class="header-img mt-2" src="../assets/images/notification.svg" alt="notification">
-                <img class="header-img mt-2 rounded-circle" src="../assets/images/image 1.png" alt="notification">
+                <img class="header-img mt-2 rounded-circle" src="../assets/images/image 1.png" alt="notification" (click)="authService.SignOut()">
             </div>
         </div>
         <div class="row position-relative mt-3">

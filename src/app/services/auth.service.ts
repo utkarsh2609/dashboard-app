@@ -1,9 +1,10 @@
 import { Injectable, NgZone } from '@angular/core';
 import { User } from "../models/user.model";
-import { auth } from 'firebase/app';
+// import { auth } from 'firebase/app';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from "@angular/router";
+import { auth } from 'firebase';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,9 @@ export class AuthService {
         localStorage.setItem('user', '');
       }
       const localUser = localStorage.getItem('user') || '';
-      JSON.parse(localUser);
+      if(localUser) {
+        JSON.parse(localUser);
+      }
     })
   }
 
@@ -52,7 +55,7 @@ export class AuthService {
       .then((result: { user: any; }) => {
         /* Call the SendVerificaitonMail() function when new user sign
         up and returns promise */
-        this.SendVerificationMail();
+        // this.SendVerificationMail();
         this.SetUserData(result.user);
       }).catch((error: { message: any; }) => {
         window.alert(error.message)
@@ -60,12 +63,12 @@ export class AuthService {
   }
 
   // Send email verfificaiton when new user sign up
-  SendVerificationMail() {
-    return this.afAuth.auth.currentUser.sendEmailVerification()
-    .then(() => {
-      this.router.navigate(['verify-email-address']);
-    })
-  }
+  // SendVerificationMail() {
+  //   return this.afAuth.auth.currentUser.sendEmailVerification()
+  //   .then(() => {
+  //     this.router.navigate(['verify-email-address']);
+  //   })
+  // }
 
   // Reset Forggot password
   ForgotPassword(passwordResetEmail: any) {
@@ -77,10 +80,10 @@ export class AuthService {
     })
   }
 
-  // Returns true when user is looged in and email is verified
+  // Returns true when user is logged in and email is verified
   get isLoggedIn(): boolean {
     const localUser = localStorage.getItem('user') || '';
-    const user = JSON.parse(localUser);
+    const user = localUser ? JSON.parse(localUser) : null;
     return (user !== null && user.emailVerified !== false) ? true : false;
   }
 
@@ -123,7 +126,7 @@ export class AuthService {
   SignOut() {
     return this.afAuth.auth.signOut().then(() => {
       localStorage.removeItem('user');
-      this.router.navigate(['sign-in']);
+      this.router.navigate(['login']);
     })
   }
 

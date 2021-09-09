@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,8 @@ import { Observable } from 'rxjs';
 export class WeatherService {
 
   constructor(
-    private httpClient: HttpClient
+    private httpClient: HttpClient,
+    private authService : AuthService
   ) { }
 
   getWeatherDataForCity(city: string) : Observable<any> {
@@ -17,5 +19,11 @@ export class WeatherService {
 
   getUsers() : Observable<any> {
     return this.httpClient.get<Observable<any>>('https://jsonplaceholder.typicode.com/users');
+  }
+
+  getUserInfo() {
+    if(this.authService.isLoggedIn) {
+      const loggedInUser = {};
+    }
   }
 }
