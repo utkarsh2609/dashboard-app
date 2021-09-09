@@ -1,0 +1,25 @@
+.profile_img {
+    height: 100px;
+    width: 100px;
+}
+
+.content_text {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+// Toggle Switch
+.form-check-input {
+    width: 44px;
+    height: 20px;
+}
+
+.form-check-input:checked {
+    background-color: #66d055 !important;
+    border-color: #66d055 !important;
+    width: 44px;
+    height: 20px;
+}

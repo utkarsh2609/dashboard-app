@@ -1,12 +1,12 @@
 <div class="section_card">
-    <div class="row">
-        <div class="section_card_header">Today's schedule</div>
-        <div class="section_card_sub_header">
+    <div class="row w-100 d-flex justify-content-between pb-4">
+        <div class="col-9 section_card_header">Today's schedule</div>
+        <div class="col-3 section_card_sub_header">
             See All
-            <img src="../../../assets//images/right_arrow.svg" alt="">
+            <img class="section_card_sub_header_right_arrow" src="../../../assets//images/right_arrow.svg" alt="right_arrow">
         </div>
     </div>
-    <div class="content">
+    <div class="w-100">
         <ul>
             <li [ngStyle]="{'border-color': event.eventColorCode}" *ngFor='let event of events'>
                 <div class="event"> {{event.purpose}}</div>

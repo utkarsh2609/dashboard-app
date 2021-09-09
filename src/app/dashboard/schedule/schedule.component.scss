@@ -1,10 +1,15 @@
 @import "../../../variables";
 
+ul {
+    padding: 0;
+    margin-bottom: 25px;
+}
+
 li {
     list-style: none;
     border-left: 5px solid olivedrab;
-    margin-bottom: 5px;
-    padding-left: 5px;
+    margin-bottom: 20px;
+    padding-left: 10px;
 
     .event {
         font-family: Lato;

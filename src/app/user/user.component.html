@@ -1,1 +1,30 @@
-<p>user works!</p>
+<div class="section_card">
+    <div class="row w-100 d-flex justify-content-between pb-4">
+        <div class="col-4 section_card_header">User Records</div>
+        <div class="col-8 section_card_sub_header">
+            <button class="custom_btn custom_secondary_btn mr-2">
+                <img src="../../assets//images/filter_btn.svg" alt="plus">
+                Filter
+            </button>
+            <button class="custom_btn custom_primary_btn">
+                <img src="../../assets//images/add_btn.svg" alt="plus">
+                Add
+            </button>
+        </div>
+    </div>
+    <div class="row" *ngIf='users.length'>
+        <div class="col-12">
+            <table class="user_table">
+                <tbody>
+                  <tr class="user_table_row" *ngFor='let user of users'>
+                    <td class="user_img_cell"><img class="user_img" [src]="user.imgUrl" alt=""></td>
+                    <td class="user_name_cell">{{user?.name}}</td>
+                    <td class="user_email_cell">{{user?.email}} </td>
+                    <td class="user_gender_cell">{{user?.gender}}</td>
+                    <td class="user_role_cell">{{user?.role}}</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

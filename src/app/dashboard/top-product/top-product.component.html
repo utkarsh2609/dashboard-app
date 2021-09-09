@@ -1,1 +1,22 @@
-<p>top-product works!</p>
+<div class="section_card">
+    <div class="row w-100 d-flex justify-content-between pb-4">
+        <div class="col-8 section_card_header">Top Products</div>
+        <div class="col-4 section_card_sub_header">
+            May - June 2021
+            <img class="section_card_sub_header_down_arrow" src="../../../assets//images/down_arrow.svg" alt="right_arrow">
+        </div>
+    </div>
+    <div class="w-100 row">
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <img src="../../../assets//images/pie_chart.svg" alt="">
+        </div>
+        <div class="col-6 d-flex justify-content-end align-items-center">
+            <ul>
+                <li *ngFor = 'let product of topProducts'>
+                    <div class="product_name">{{product.name}}</div>
+                    <div class="product_percent"> {{product.percent}} </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

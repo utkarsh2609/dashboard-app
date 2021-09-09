@@ -1,0 +1,37 @@
+@import "../../variables";
+
+
+.user_table {
+    width: 938px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    border-collapse: collapse;
+    vertical-align: middle;
+
+    .user_table_row {
+        background: $accent-color;
+        border-radius: 10px;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        margin: 1rem 0;
+    }
+
+    .user_img_cell, .user_gender_cell, .user_role_cell {
+        width: 10%;
+    }
+
+    .user_email_cell, .user_name_cell {
+        width: 20%;
+    }
+    .user_img {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+    }
+}

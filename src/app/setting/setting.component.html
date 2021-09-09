@@ -1,1 +1,146 @@
-<p>setting works!</p>
+<div class="row">
+    <div class="col-md-7">
+        <!-- Profile Section -->
+        <div class="section_card">
+            <div class="row w-100 d-flex justify-content-between pb-4">
+                <div class="col-12 section_card_header">Profile</div>
+            </div>
+            <div class="w-100 row">
+                <div class="col-12 d-flex justify-content-between align-items-start">
+                    <div class="col-md-3 d-flex justify-content-center flex-column">
+                        <!-- Profile Picture -->
+                        <img class="profile_img rounded-circle" src="../../assets/images/image 1.png" alt="">
+
+                        <button class="custom_btn custom_secondary_btn mt-2">
+                            Change
+                        </button>
+                    </div>
+                    <div class="col-md-9">
+                        <!-- Profile Form -->
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="custom_form_label" for="firstName">First Name</label>
+                                        <input type="text" class="custom_input_field" id="firstName"
+                                            aria-describedby="firstNameHelp">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="custom_form_label" for="lastName">Last Name</label>
+                                        <input type="text" class="custom_input_field" id="lastName"
+                                            aria-describedby="firstNameHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="custom_form_label" for="dob">Date of Birth</label>
+                                        <input type="date" class="custom_input_field" id="dob"
+                                            aria-describedby="dobHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="custom_form_label" for="phoneNumber">Phone Number</label>
+                                        <input type="number" class="custom_input_field" id="phoneNumber"
+                                            aria-describedby="phoneNumberHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <label class="custom_form_label" for="address">Address</label>
+                                        <input type="text" class="custom_input_field" id="address"
+                                            aria-describedby="adressHelp">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12 d-flex justify-content-end">
+                                    <button type="submit" class="custom_btn custom_save_btn">Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <!-- Account Section -->
+        <div class="section_card">
+            <div class="row w-100 d-flex justify-content-between pb-4">
+                <div class="col-12 section_card_header">Account</div>
+            </div>
+            <div class="w-100 row">
+                <!-- Account Form -->
+                <form class="w-100">
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="custom_form_label" for="email">Email</label>
+                                <input type="email" class="custom_input_field" id="email" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="custom_form_label" for="currentpswrd">Current Password</label>
+                                <input type="password" class="custom_input_field" id="currentpswrd"
+                                    aria-describedby="currentpswrdHelp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <label class="custom_form_label" for="newpswrd">New Password</label>
+                                <input type="password" class="custom_input_field" id="newpswrd"
+                                    aria-describedby="newpswrdHelp">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-12 d-flex justify-content-end">
+                            <button type="submit" class="custom_btn custom_save_btn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Security Section -->
+        <div class="section_card mt-4">
+            <div class="row w-100 d-flex justify-content-between pb-4">
+                <div class="col-12 section_card_header">Security</div>
+            </div>
+            <div class="w-100 row">
+                <div class="col-12 d-flex justify-content-between align-items-center">
+                    <div class="content_text">2-Step Verification</div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Danger Section  -->
+        <div class="section_card mt-4">
+            <div class="row w-100 d-flex justify-content-between pb-4">
+                <div class="col-12 section_card_header danger_text">Danger Zone</div>
+            </div>
+            <div class="w-100 row">
+                <!-- <div class="col-12 d-flex justify-content-between align-items-center"> -->
+                <button class="custom_btn custom_danger_btn w-100">Delete My Account</button>
+                <!-- </div> -->
+            </div>
+        </div>
+
+    </div>
+</div>
