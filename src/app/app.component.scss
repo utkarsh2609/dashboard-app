@@ -2,9 +2,9 @@
 
 .app-container {
   position: relative;
-  margin-top: 4%;
-  margin-left: 2%;
-  margin-right: 2%;
+  // margin-top: 4%;
+  // margin-left: 2%;
+  // margin-right: 2%;
   display: flex;
   justify-content: space-between;
 }
@@ -28,6 +28,8 @@ main {
 
 .header-img {
   margin-right: 2rem;
+  height: 30px;
+  width: 30px;
 }
 
 .router_outlet {

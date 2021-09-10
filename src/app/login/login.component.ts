@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, AfterViewInit, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CommunicationService } from '../services/communication.service';
 import Constants from '../shared/constants';
 
 @Component({
@@ -9,19 +10,21 @@ import Constants from '../shared/constants';
 })
 export class LoginComponent implements OnInit {
   appTitle = Constants.APP_TITLE;
-  title = 'Sign In';
-  description = 'Sign in to your account';
+  title = '';
+  description = '';
 
   constructor(
-    private router: Router
+    private communicationService: CommunicationService,
+    private cdr: ChangeDetectorRef
   ) { }
 
   ngOnInit(): void {
     // Set current form title here
-    // this.title = this.route.url.
-    // this.route.url.subscribe(u => console.log('curr', u))
-    // this.title = this.router.url;
-    // console.log('title', this.title)
+    this.communicationService.loginComponentHeaderInfo.subscribe(info => {
+      this.title = info.title;
+      this.description = info.description;
+    });
+    // this.cdr.detectChanges();
   }
 
 }

@@ -1,7 +1,18 @@
-<div class="section_card">
-    <div class="row w-100 d-flex justify-content-between pb-4">
-        <div class="col-12 section_card_header">Account</div>
+<div class="row my-3">
+    <div class="col-12 d-flex justify-content-between">
+        <!-- Continue with Google -->
+    <button type="button" class="social_btn" (click)="authService.GoogleAuth()">
+      <img src="../../../assets/images/google-icon 1.svg" alt="">
+      Sign up with Google
+    </button>
+    <button type="button" class="social_btn" (click)="authService.GoogleAuth()">
+        <img src="../../../assets/images/apple 1.svg" alt="">
+        Sign up with Apple
+      </button>
     </div>
+</div>
+
+<div class="section_card">
     <div class="w-100 row">
         <!-- Sign Up Form -->
         <form class="w-100">
@@ -32,7 +43,7 @@
             <div class="row mt-3">
                 <div class="col-12">
                     <div class="form-group">
-                        <label class="custom_form_label" for="currentpswrd">Current Password</label>
+                        <label class="custom_form_label" for="currentpswrd">Password</label>
                         <input type="password" class="custom_input_field" id="currentpswrd"
                             aria-describedby="currentpswrdHelp" #userPwd required>
                     </div>
@@ -41,7 +52,7 @@
             <div class="row mt-3">
                 <div class="col-12">
                     <div class="form-group">
-                        <label class="custom_form_label" for="newpswrd">New Password</label>
+                        <label class="custom_form_label" for="newpswrd">Confirm Password</label>
                         <input type="password" class="custom_input_field" id="newpswrd"
                             aria-describedby="newpswrdHelp">
                     </div>
@@ -49,21 +60,13 @@
             </div>
             <div class="row mt-4">
                 <div class="col-12 d-flex justify-content-end">
-                    <button type="submit" class="custom_btn custom_save_btn"(click)="authService.SignUp(userEmail.value, userPwd.value)">Sign Up</button>
+                    <button type="submit" class="custom_btn custom_primary_btn custom_login_btn w-100"(click)="authService.SignUp(userEmail.value, userPwd.value)">Sign Up</button>
                 </div>
             </div>
         </form>
     </div>
 </div>
 
-<!-- Continue with Google -->
-<div class="formGroup">
-    <button type="button" class="btn googleBtn" (click)="authService.GoogleAuth()">
-      <i class="fab fa-google-plus-g"></i>
-      Continue with Google
-    </button>
-  </div>
-
-  <div class="redirectToLogin">
-    <span>Already have an account? <span class="redirect" routerLink="/sign-in">Log In</span></span>
+  <div class="col-12 d-flex justify-content-center mt-3">
+    <span>Already have an account? <span class="custom_link" routerLink="/login/sign-in">Sign in here</span></span>
   </div> 

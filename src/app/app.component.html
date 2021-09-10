@@ -1,5 +1,5 @@
 
-<div class="app-container">
+<div class="app-container" [ngClass]="{'my-5 mx-5' : authService.isLoggedIn}">
     <aside class="d-flex justify-content-start" *ngIf="authService.isLoggedIn">
         <app-sidebar></app-sidebar>
     </aside>
@@ -11,10 +11,10 @@
             <div class="col-sm-6 d-flex justify-content-end">
                 <div class="global_search"> </div>
                 <img class="header-img mt-2" src="../assets/images/notification.svg" alt="notification">
-                <img class="header-img mt-2 rounded-circle" src="../assets/images/image 1.png" alt="notification" (click)="authService.SignOut()">
+                <img class="header-img mt-2 rounded-circle" [src]="profilePicture" alt="user" (click)="authService.SignOut()">
             </div>
         </div>
-        <div class="row position-relative mt-3">
+        <div class="row position-relative" [ngClass]="{'mt-3' : authService.isLoggedIn}" >
             <div class="col-md-12 pt-2 router_outlet">
                 <router-outlet></router-outlet>
             </div>

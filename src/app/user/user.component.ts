@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CommunicationService } from '../services/communication.service';
 import { WeatherService } from '../services/weather.service';
+import Constants from '../shared/constants';
 
 @Component({
   selector: 'app-user',
@@ -10,11 +12,13 @@ export class UserComponent implements OnInit {
   users = Array<any>();
 
   constructor(
-    private weatherService: WeatherService
+    private weatherService: WeatherService,
+    private communicationService: CommunicationService
   ) { }
 
   ngOnInit(): void {
-    this.getUserList();
+  this.communicationService.currentPageHeading.next(Constants.USERS_TITLE);
+  this.getUserList();
   }
 
 

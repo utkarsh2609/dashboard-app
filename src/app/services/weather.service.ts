@@ -24,6 +24,7 @@ export class WeatherService {
   getUserInfo() {
     if(this.authService.isLoggedIn) {
       const loggedInUser = {};
+      // loggedInUser.
     }
   }
 }

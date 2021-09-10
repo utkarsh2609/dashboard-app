@@ -90,6 +90,10 @@ body {
     color: $danger-color;
 }
 
+.custom_login_btn {
+    height: 40px;
+}
+
 .danger_text {
     color: $danger-color;
 }
@@ -116,4 +120,14 @@ body {
     padding: 0.375rem 0.75rem;
     border: none;
     height: 40px;
+}
+
+.custom_link {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: $link-color;
+    cursor: pointer;
 }
